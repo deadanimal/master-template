@@ -134,6 +134,15 @@ USE_TZ = True
 
 # STATIC_URL = '/static/'
 
+ANYMAIL = {
+    'SENDGRID_API_KEY': config('SENDGRID_API_KEY'),
+}
+EMAIL_BACKEND = "anymail.backends.sendgrid.EmailBackend"
+DEFAULT_FROM_EMAIL = "ghg@mbpj.gov.my"  # if you don't already have this in settings
+AUTH_USER_MODEL = 'users.CustomUser' 
+ACCOUNT_EMAIL_VERIFICATION = 'optional'
+ACCOUNT_EMAIL_SUBJECT_PREFIX = '[MBPJ eRebat] '
+
 CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOW_CREDENTIALS = True
 CORS_ORIGIN_WHITELIST = [

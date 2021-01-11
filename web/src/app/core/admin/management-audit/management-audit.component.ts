@@ -130,7 +130,7 @@ export class ManagementAuditComponent implements OnInit, OnDestroy {
     this.tableEntries = $event.target.value;
   }
 
-  filterTable($event) {
+  filterTable($event) { // Kalau semua data ada
     let val = $event.target.value;
     this.tableTemp = this.tableRows.filter(function (d) {
       for (var key in d) {
@@ -140,7 +140,21 @@ export class ManagementAuditComponent implements OnInit, OnDestroy {
       }
       return false;
     });
+
+  //   this.tableTemp = this.tableRows.filter(function (d) { // Kalau ada null data
+  //     for (var key in d) {
+  //       if (d[key]) {
+  //         if (d[key].toString().toLowerCase().indexOf(val) !== -1) {
+  //           return true;
+  //         }
+  //       }
+  //     }
+  //     return false;
+  //   });
+  // }
   }
+
+
 
   onSelect({ selected }) {
     this.tableSelected.splice(0, this.tableSelected.length);

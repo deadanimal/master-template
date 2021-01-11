@@ -19,13 +19,15 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ManagementAuditComponent } from './management-audit/management-audit.component';
 import { ManagementUserComponent } from './management-user/management-user.component';
 import { ReportComponent } from './report/report.component';
+import { FaqComponent } from './faq/faq.component';
 
 @NgModule({
   declarations: [
     DashboardComponent,
     ManagementAuditComponent,
     ManagementUserComponent,
-    ReportComponent
+    ReportComponent,
+    FaqComponent
   ],
   imports: [
     CommonModule,
